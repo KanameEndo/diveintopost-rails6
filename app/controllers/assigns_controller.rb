@@ -39,7 +39,7 @@ class AssignsController < ApplicationController
       else
         I18n.t('views.messages.cannot_delete_another_member')
       end
-    elsif current_user.id != assign.team.owner.team_id
+    elsif current_user.id != assign.team.owner.team_ids
       if current_user.id == assigned_user.id
         assign.destroy
         set_next_team(assign, assigned_user)
