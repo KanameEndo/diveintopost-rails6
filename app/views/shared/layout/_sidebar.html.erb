@@ -38,6 +38,7 @@
               </p>
             </a>
             <%= link_to I18n.t('views.button.delete'), agenda_path(agenda.id), method: :delete, data: { confirm: '削除しますか？' }, class: 'btn btn-sm btn-danger' %>
+            <%# 削除ボタンじっそうOK %>
             <ul class="nav nav-treeview" style="display: block;">
               <% agenda.articles.each do |article| %>
                 <li class="nav-item">
